@@ -328,19 +328,38 @@ body {
   </div>
 
   <script>
-    function showSection(id) {
-      document.getElementById('categories').style.display = 'none';
-      document.querySelectorAll('.menu-section')
-        .forEach(s => s.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
-    }
+function showSection(id) {
+  // إخفاء الأقسام
+  document.querySelectorAll('.menu-section')
+    .forEach(s => {
+      s.style.display = 'none';
+      s.style.visibility = 'hidden';
+    });
 
-    function goBack() {
-      document.querySelectorAll('.menu-section')
-        .forEach(s => s.style.display = 'none');
-      document.getElementById('categories').style.display = 'grid';
-    }
-  </script>
+  // إخفاء التصنيفات
+  document.getElementById('categories').style.display = 'none';
+
+  // إظهار القسم المطلوب
+  const section = document.getElementById(id);
+  section.style.display = 'block';
+  section.style.visibility = 'visible';
+
+  // الرجوع لأعلى الصفحة
+  window.scrollTo(0, 0);
+}
+
+function goBack() {
+  document.querySelectorAll('.menu-section')
+    .forEach(s => {
+      s.style.display = 'none';
+      s.style.visibility = 'hidden';
+    });
+
+  document.getElementById('categories').style.display = 'grid';
+  window.scrollTo(0, 0);
+}
+</script>
+
   <script>
 function orderWhatsApp(item) {
   const phone = "905524301493"; // ضع رقم المطعم هنا بدون +
