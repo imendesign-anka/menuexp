@@ -85,6 +85,43 @@ body {
   cursor: pointer;
   border-radius: 6px;
 }
+    .menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.menu-item .info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+    .order-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.order-btn:hover {
+  opacity: 0.85;
+}
+
+
 </style>
 
 </head>
@@ -123,20 +160,171 @@ body {
       <p>İçecekler</p>
     </div>
   </div>
+  
+
+  <!-- MEZELER -->
+<div id="mezeler" class="menu-section">
+  <button class="back-btn" onclick="goBack()">← Menüye Dön</button>
+  <h2>Mezeler</h2>
+
+  <div class="menu-item">
+    <img src="images/items/humus.jpg">
+    <div class="info"><span>Humus</span><span>55 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('Humus')">Sipariş Ver</button>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/items/icli-kofte.jpg">
+    <div class="info"><span>İçli Köfte</span><span>50 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('İçli Köfte')">Sipariş Ver</button>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/items/koz-patlican.jpg">
+    <div class="info"><span>Köz Patlıcan</span><span>65 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('Köz Patlıcan')">Sipariş Ver</button>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/items/sarma.jpg">
+    <div class="info"><span>Zeytinli Sarma</span><span>70 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('Zeytinli Sarma')">Sipariş Ver</button>
+  </div>
+</div>
+
+
+  <!-- ANA YEMEKLER -->
+  <div id="anayemek" class="menu-section">
+  <button class="back-btn" onclick="goBack()">← Menüye Dön</button>
+  <h2>Ana Yemekler</h2>
+
+  <div class="menu-item">
+    <img src="images/items/adana-kebap.jpg">
+    <div class="info"><span>Adana Kebabı</span><span>360 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('Adana Kebabı')">Sipariş Ver</button>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/items/alinazik.jpg">
+    <div class="info"><span>Ali Nazik</span><span>300 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('Ali Nazik')">Sipariş Ver</button>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/items/kanat-izgarasi.jpg">
+    <div class="info"><span>Kanatlar Izgarası</span><span>280 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('Kanatlar Izgarası')">Sipariş Ver</button>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/items/karniyarik.jpg">
+    <div class="info"><span>Karnıyarık</span><span>300 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('Karnıyarık')">Sipariş Ver</button>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/items/kuru-patlican.jpg">
+    <div class="info"><span>Kuru Patlıcan</span><span>280 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('Kuru Patlıcan')">Sipariş Ver</button>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/items/kuru-fasulye.jpg">
+    <div class="info"><span>Kuru Fasulye</span><span>230 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('Kuru Fasulye')">Sipariş Ver</button>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/items/manti.jpg">
+    <div class="info"><span>Mantı</span><span>200 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('Mantı')">Sipariş Ver</button>
+  </div>
+</div>
+
+
+
+  <!-- TATLİLER -->
+  <div id="tatlilar" class="menu-section">
+  <button class="back-btn" onclick="goBack()">← Menüye Dön</button>
+  <h2>Tatlılar</h2>
+
+  <div class="menu-item">
+    <img src="images/items/pasta.jpg">
+    <div class="info"><span>Çikolatalı Pasta</span><span>80 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('Çikolatalı Pasta')">Sipariş Ver</button>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/items/sufle.jpg">
+    <div class="info"><span>Sufle</span><span>95 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('Sufle')">Sipariş Ver</button>
+  </div>
+
+  <div class="menu-item">
+    <img src="images/items/cilekli-magnolia.jpg">
+    <div class="info"><span>Çilekli Magnolia</span><span>85 ₺</span></div>
+    <button class="order-btn" onclick="orderWhatsApp('Çilekli Magnolia')">Sipariş Ver</button>
+  </div>
+</div>
+
+
+
 
   <!-- İÇECEKLER -->
   <div id="icecek" class="menu-section">
     <button class="back-btn" onclick="goBack()">← Menüye Dön</button>
 
-    <h2>İçecekler</h2>
+<h2>İçecekler</h2>
 
-    <h3>Sıcak</h3>
-    <p>Çay</p>
-    <p>Kahve</p>
+<h3>Sıcak İçecekler</h3>
 
-    <h3>Soğuk</h3>
-    <p>Su</p>
-    <p>Meyve Suyu</p>
+<div class="menu-item">
+  <img src="images/items/tea.jpg">
+  <div class="info">
+    <span>Çay</span>
+    <span>20 ₺</span>
+  </div>
+  <button class="order-btn" onclick="orderWhatsApp('Çay')">Sipariş Ver</button>
+</div>
+
+<div class="menu-item">
+  <img src="images/items/caffe.jpg">
+  <div class="info">
+    <span>Kahve</span>
+    <span>30 ₺</span>
+  </div>
+  <button class="order-btn" onclick="orderWhatsApp('Kahve')">Sipariş Ver</button>
+</div>
+
+<h3>Soğuk İçecekler</h3>
+
+<div class="menu-item">
+  <img src="images/items/su.jpg">
+  <div class="info">
+    <span>Su</span>
+    <span>10 ₺</span>
+  </div>
+  <button class="order-btn" onclick="orderWhatsApp('Su')">Sipariş Ver</button>
+</div>
+
+<div class="menu-item">
+  <img src="images/items/meyvesuyu.jpg">
+  <div class="info">
+    <span>Meyve Suyu</span>
+    <span>35 ₺</span>
+  </div>
+  <button class="order-btn" onclick="orderWhatsApp('Meyve Suyu')">Sipariş Ver</button>
+</div>
+
+    <div class="menu-item">
+  <img src="images/items/ayran.jpg">
+  <div class="info">
+    <span>Ayran</span>
+    <span>35 ₺</span>
+  </div>
+      <button class="order-btn" onclick="orderWhatsApp('Ayran')">Sipariş Ver</button>
+</div>
+
   </div>
 
   <script>
@@ -153,6 +341,16 @@ body {
       document.getElementById('categories').style.display = 'grid';
     }
   </script>
+  <script>
+function orderWhatsApp(item) {
+  const phone = "905524301493"; // ضع رقم المطعم هنا بدون +
+  const message = encodeURIComponent(
+    "Merhaba, " + item + " sipariş vermek istiyorum."
+  );
+  window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
+}
+</script>
+
 
 </body>
 </html>
