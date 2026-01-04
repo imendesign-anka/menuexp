@@ -121,6 +121,21 @@ body {
   opacity: 0.85;
 }
 
+    .lang-switch {
+  text-align: right;
+  margin: 10px;
+}
+
+.lang-switch button {
+  background: none;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
 
 </style>
 
@@ -132,6 +147,12 @@ body {
   <div class="logo">
     <img src="images/logo.png" alt="Logo" width="150">
   </div>
+
+  <div class="lang-switch">
+  <button onclick="setLang('tr')">TR</button>
+  <button onclick="setLang('ar')">AR</button>
+</div>
+
 
   <!-- CATEGORIES -->
   <div id="categories" class="categories">
@@ -251,7 +272,7 @@ body {
   <div class="menu-item">
     <img src="images/items/tantuni.jpg">
     <div class="info">
-      <span>Tantuni</span>
+      <span data-tr="Tantuni" data-ar="طنطوني">Tantuni</span>
       <span>260 ₺</span>
     </div>
     <button class="order-btn" onclick="orderWhatsApp('Tantuni')">
@@ -288,7 +309,8 @@ body {
   <!-- TATLİLER -->
   <div id="tatlilar" class="menu-section">
   <button class="back-btn" onclick="goBack()">← Menüye Dön</button>
-  <h2>Tatlılar</h2>
+  <h2 data-tr="Tatlılar" data-ar="حلويات">Tatlılar</h2>
+
 
   <div class="menu-item">
     <img src="images/items/pasta.jpg">
@@ -411,6 +433,24 @@ function orderWhatsApp(item) {
   window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
 }
 </script>
+
+
+  <script>   //العربية
+function setLang(lang) {
+  document.querySelectorAll('[data-tr]').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+
+  if (lang === 'ar') {
+    document.body.style.direction = 'rtl';
+    document.body.style.textAlign = 'right';
+  } else {
+    document.body.style.direction = 'ltr';
+    document.body.style.textAlign = 'left';
+  }
+}
+</script>
+
 
 
 </body>
